@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eeeeee"
+              android:orientation="vertical">
+
+    <View
+            android:id="@+id/view_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary_title"
+            android:gravity="center">
+
+        <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_order_topbar_re"
+                android:padding="3dp">
+
+            <View
+                    android:id="@+id/order_manager_shade"
+                    android:layout_width="97dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_order_topbar_coverage"/>
+
+            <com.cts.colortracktabdemo.ColorTrackView
+                    android:id="@+id/already_receiver_order"
+                    android:layout_width="97dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:text="已接订单"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"/>
+
+            <com.cts.colortracktabdemo.ColorTrackView
+                    android:id="@+id/already_finish_order"
+                    android:layout_width="97dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/already_receiver_order"
+                    android:gravity="center"
+                    android:paddingTop="1dp"
+                    android:paddingRight="1dp"
+                    android:paddingBottom="1dp"
+                    android:text="完成订单"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+            android:layout_width="97dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_order_topbar_coverage"/>
+    <android.support.v4.view.ViewPager
+            android:id="@+id/order_list_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            android:overScrollMode="never"></android.support.v4.view.ViewPager>
+
+</LinearLayout>
