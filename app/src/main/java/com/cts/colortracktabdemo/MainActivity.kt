@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
         already_finish_order.setOnClickListener {
             order_list_viewpager.setCurrentItem(2)
         }
+
     }
 
     /**
